@@ -1,0 +1,532 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css to edit this template
+*/
+/* 
+    Created on : Mar 16, 2026, 9:15:51 PM
+    Author     : Ma
+*/
+
+/* ===========================
+   BabyStore - style.css
+   =========================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;900&family=Pacifico&display=swap');
+
+:root {
+    --primary:    #4dabf7;   /* xanh chính */
+    --primary-dk: #339af0;   /* xanh đậm */
+    --secondary:  #74c0fc;   /* xanh nhạt */
+    --accent:     #a5d8ff;   /* xanh pastel */
+    --soft-bg:    #f0f8ff;   /* nền nhẹ */
+    --card-bg:    #ffffff;
+    --text:       #2d2d2d;
+    --text-muted: #888;
+    --radius:     18px;
+    --shadow:     0 8px 32px rgba(77,171,247,.15);
+    --shadow-hover: 0 16px 48px rgba(77,171,247,.28);
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+    font-family: 'Nunito', sans-serif;
+    background: var(--soft-bg);
+    color: var(--text);
+}
+
+/* ── NAVBAR ─────────────────────────────── */
+.navbar {
+    background: #fff;
+    padding: 14px 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 2px 16px rgba(255,107,157,.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.navbar-brand {
+    font-family: 'Pacifico', cursive;
+    font-size: 1.8rem;
+    color: var(--primary);
+    text-decoration: none;
+    letter-spacing: 1px;
+}
+
+.navbar-brand span { color: var(--secondary); }
+
+.nav-links { display: flex; gap: 28px; list-style: none; }
+
+.nav-links a {
+    text-decoration: none;
+    font-weight: 700;
+    color: var(--text-muted);
+    font-size: .95rem;
+    transition: color .2s;
+}
+
+.nav-links a:hover { color: var(--primary); }
+
+.nav-cart {
+    background: var(--primary);
+    color: #fff;
+    border: none;
+    border-radius: 50px;
+    padding: 9px 22px;
+    font-weight: 700;
+    font-size: .9rem;
+    cursor: pointer;
+    font-family: 'Nunito', sans-serif;
+    transition: background .2s, transform .15s;
+}
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.nav-user {
+    font-weight: 700;
+    font-size: .9rem;
+}
+
+.nav-btn {
+    background: var(--primary);
+    color: #fff;
+    padding: 7px 14px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: .85rem;
+    font-weight: 700;
+}
+
+.nav-btn:hover {
+    background: var(--primary-dk);
+}
+
+.nav-btn.outline {
+    background: transparent;
+    border: 2px solid var(--primary);
+    color: var(--primary);
+}
+
+.nav-btn.outline:hover {
+    background: var(--primary);
+    color: #fff;
+}
+
+.nav-cart:hover { background: var(--primary-dk); transform: scale(1.04); }
+
+/* ── HERO ────────────────────────────────── */
+.hero {
+    width: 100%;
+    background: linear-gradient(135deg, #f8f0ff 0%, #e8f0fe 100%); /* nền gradient tím nhạt/xanh nhạt */
+    padding: 80px 0;
+    min-height: 500px;
+    display: flex;
+    align-items: center;
+}
+
+.hero-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 40px;
+    gap: 40px;
+    width: 100%;
+}
+
+.hero-text {
+    flex: 1;
+    text-align: left;
+    max-width: 550px;
+}
+
+.hero-text h1 {
+    font-size: 3.2rem;
+    font-weight: 900;
+    color: #4a4a4a;  /* màu chữ đậm */
+    margin-bottom: 20px;
+    line-height: 1.2;
+    font-family: 'Nunito', sans-serif;
+}
+
+.hero-text p {
+    font-size: 1.2rem;
+    color: #666;
+    margin-bottom: 30px;
+    line-height: 1.6;
+    font-weight: 400;
+}
+
+.hero-btn {
+    display: inline-block;
+    background: #4682b4; 
+    color: #fff;
+    text-decoration: none;
+    padding: 15px 45px;
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 1.1rem;
+    transition: background 0.3s, transform 0.2s;
+    border: none;
+    box-shadow: 0 10px 20px rgba(255, 138, 92, 0.3);
+}
+
+.hero-btn:hover {
+    background: #ff6b3d;
+    transform: translateY(-2px);
+    box-shadow: 0 15px 25px rgba(255, 138, 92, 0.4);
+}
+
+.hero-image {
+    flex: 0.4;
+    text-align: center;
+    position: relative;
+}
+
+.hero-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 30px;
+    max-height: 600px;
+    width: auto;
+    object-fit: contain;
+    filter: drop-shadow(0 20px 30px rgba(0, 0, 0, 0.1));
+}
+
+/* responsive */
+@media (max-width: 968px) {
+    .hero {
+        padding: 60px 0;
+    }
+    
+    .hero-text h1 {
+        font-size: 2.5rem;
+    }
+    
+    .hero-text p {
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-container {
+        flex-direction: column;
+        text-align: center;
+        gap: 40px;
+    }
+
+    .hero-text {
+        text-align: center;
+        max-width: 100%;
+    }
+
+    .hero-image {
+        text-align: center;
+    }
+    
+    .hero-image img {
+        max-height: 350px;
+    }
+}
+/* ── WHY US ──────────────────────────────── */
+.why-us {
+    padding: 60px 40px;
+    text-align: center;
+    background: #fff;
+}
+
+.why-us h2 {
+    font-size: 1.9rem;
+    font-weight: 900;
+    margin-bottom: 40px;
+    position: relative;
+    display: inline-block;
+}
+
+.why-us h2::after {
+    content: '';
+    display: block;
+    height: 4px;
+    width: 60px;
+    background: var(--primary);
+    border-radius: 4px;
+    margin: 10px auto 0;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 28px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.feature-card {
+    background: var(--soft-bg);
+    border-radius: var(--radius);
+    padding: 36px 24px;
+    transition: transform .2s, box-shadow .2s;
+}
+
+.feature-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow);
+}
+
+.feature-icon {
+    font-size: 2.4rem;
+    margin-bottom: 14px;
+    display: block;
+}
+
+.feature-card h5 {
+    font-weight: 900;
+    font-size: 1.05rem;
+    margin-bottom: 6px;
+}
+
+.feature-card p { color: var(--text-muted); font-size: .9rem; }
+
+/* ── PRODUCTS ────────────────────────────── */
+.products {
+    padding: 60px 40px;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.section-header h2 {
+    font-size: 1.9rem;
+    font-weight: 900;
+    display: inline-block;
+    position: relative;
+}
+
+.section-header h2::after {
+    content: '';
+    display: block;
+    height: 4px;
+    width: 60px;
+    background: var(--secondary);
+    border-radius: 4px;
+    margin: 10px auto 0;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 28px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.product-card {
+    background: var(--card-bg);
+    border-radius: var(--radius);
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    transition: transform .25s, box-shadow .25s;
+    display: flex;
+    flex-direction: column;
+}
+
+.product-card:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--shadow-hover);
+}
+
+.product-card img {
+    width: 100%;
+    height: 210px;
+    object-fit: cover;
+    display: block;
+}
+
+.product-body {
+    padding: 18px 20px 20px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.product-body h5 {
+    font-weight: 800;
+    font-size: 1rem;
+    margin-bottom: 8px;
+    line-height: 1.35;
+}
+.product-card {
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+    background: #fff;
+    transition: 0.2s;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+}
+
+/* badge */
+.badge-hot {
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    background: red;
+    color: #fff;
+    font-size: 11px;
+    padding: 3px 8px;
+    border-radius: 6px;
+}
+
+/* danh mục */
+.product-cat {
+    font-size: 11px;
+    color: #888;
+}
+
+/* rating */
+.rating {
+    font-size: 12px;
+    color: #f5a623;
+    margin: 4px 0;
+}
+
+/* tồn kho */
+.stock {
+    font-size: 12px;
+    color: green;
+}
+
+/* nút */
+.btn-cart {
+    background: #1a1917;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 6px;
+    text-decoration: none;
+}
+.product-price {
+    color: var(--primary);
+    font-weight: 900;
+    font-size: 1.1rem;
+    margin-bottom: 14px;
+}
+
+.btn-detail {
+    display: inline-block;
+    background: var(--primary);
+    color: #fff;
+    text-decoration: none;
+    padding: 9px 22px;
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: .88rem;
+    text-align: center;
+    transition: background .2s, transform .15s;
+    margin-top: auto;
+    align-self: flex-start;
+}
+
+.btn-detail:hover {
+    background: var(--primary-dk);
+    color: #fff;
+    transform: scale(1.04);
+}
+/* SEARCH BAR */
+.nav-search {
+    display: flex;
+    align-items: center;
+    background: var(--soft-bg);
+    border: 2px solid var(--border);
+    border-radius: 50px;
+    padding: 5px 12px;
+    margin-right: 10px;
+}
+
+.nav-search input {
+    border: none;
+    outline: none;
+    background: transparent;
+    font-size: 14px;
+    width: 150px;
+}
+
+.search-btn {
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    font-size: 16px;
+}
+.category-menu {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin-bottom: 40px;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+
+.category-menu a {
+    padding: 8px 14px;
+    border-radius: 20px;
+    background: #f0ede8;
+    text-decoration: none;
+    color: #333;
+    font-size: 13px;
+    transition: 0.2s;
+}
+
+.category-menu a:hover {
+    background: #333;
+    color: #fff;
+}
+
+.category-menu a.active {
+    background: #1a1917;
+    color: #fff;
+}
+/* ── ERROR ───────────────────────────────── */
+.error-msg {
+    color: #dc3545;
+    text-align: center;
+    padding: 20px;
+    font-weight: 600;
+}
+.product-actions {
+    display: flex;
+    gap: 10px;
+    margin-top: auto;
+}
+
+.btn-cart {
+    background: var(--secondary);
+    color: #fff;
+    padding: 9px 16px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-size: .85rem;
+    font-weight: 700;
+    transition: .2s;
+}
+
+.btn-cart:hover {
+    background: var(--primary);
+}
+/* ── RESPONSIVE ──────────────────────────── */
+@media (max-width: 640px) {
+    .navbar { padding: 14px 20px; }
+    .hero   { padding: 60px 20px 50px; }
+    .why-us, .products { padding: 40px 20px; }
+    .nav-links { display: none; }
+}

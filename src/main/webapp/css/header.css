@@ -1,0 +1,180 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css to edit this template
+*/
+/* 
+    Created on : Mar 18, 2026, 7:40:53 AM
+    Author     : Ma
+*/
+
+* {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    
+    .navbar {
+        background: rgba(255, 255, 255, 0.95);
+        backdrop-filter: blur(10px);
+        box-shadow: 0 2px 20px rgba(0,0,0,0.05);
+        padding: 1rem 2rem;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 1000;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+    
+    .navbar-brand {
+        font-size: 1.8rem;
+        font-weight: 700;
+        font-family: 'Plus Jakarta Sans', sans-serif;
+        text-decoration: none;
+        background: linear-gradient(135deg, #00639c, #2e6385);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+    }
+    
+    .nav-links {
+        display: flex;
+        gap: 2rem;
+        list-style: none;
+    }
+    
+    .nav-links a {
+        text-decoration: none;
+        color: #404751;
+        font-weight: 500;
+        transition: color 0.3s;
+        font-family: 'Be Vietnam Pro', sans-serif;
+    }
+    
+    .nav-links a:hover {
+        color: #00639c;
+    }
+    
+    /* Dropdown menu */
+    .dropdown {
+        position: relative;
+    }
+    
+    .dropdown-menu {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background: white;
+        min-width: 200px;
+        border-radius: 12px;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        padding: 0.5rem 0;
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.3s;
+        z-index: 100;
+        list-style: none;
+    }
+    
+    .dropdown:hover .dropdown-menu {
+        opacity: 1;
+        visibility: visible;
+    }
+    
+    .dropdown-menu li a {
+        display: block;
+        padding: 0.5rem 1rem;
+        color: #404751;
+    }
+    
+    .dropdown-menu li a:hover {
+        background: #f5faff;
+        color: #00639c;
+    }
+    
+    .nav-right {
+        display: flex;
+        align-items: center;
+        gap: 1.5rem;
+    }
+    
+    .nav-search {
+        display: flex;
+        align-items: center;
+        background: #f5faff;
+        border-radius: 40px;
+        padding: 0.3rem 0.8rem;
+    }
+    
+    .nav-search input {
+        border: none;
+        background: transparent;
+        padding: 0.5rem;
+        outline: none;
+        font-size: 0.9rem;
+        width: 180px;
+    }
+    
+    .nav-search button {
+        background: none;
+        border: none;
+        cursor: pointer;
+        color: #00639c;
+    }
+    
+    .nav-cart {
+        text-decoration: none;
+        color: #00639c;
+        font-weight: 500;
+        display: flex;
+        align-items: center;
+        gap: 0.3rem;
+    }
+    
+    .nav-user {
+        color: #404751;
+        font-size: 0.9rem;
+    }
+    
+    .nav-btn {
+        text-decoration: none;
+        padding: 0.5rem 1rem;
+        border-radius: 40px;
+        font-size: 0.9rem;
+        transition: all 0.3s;
+    }
+    
+    .nav-btn:first-of-type {
+        background: #00639c;
+        color: white;
+    }
+    
+    .nav-btn.outline {
+        border: 1px solid #00639c;
+        color: #00639c;
+    }
+    
+    .nav-btn:hover {
+        transform: scale(1.05);
+    }
+    
+    @media (max-width: 768px) {
+        .navbar {
+            flex-direction: column;
+            gap: 1rem;
+        }
+        .nav-links {
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .nav-right {
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        body {
+            padding-top: 180px;
+        }
+    }

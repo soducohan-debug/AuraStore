@@ -1,0 +1,142 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css to edit this template
+*/
+/* 
+    Created on : Mar 19, 2026, 10:47:59 AM
+    Author     : Ma
+*/
+/* css/footer.css - Giữ nguyên style như mẫu cũ */
+
+.footer {
+    background-color: #e8f4fe;
+    padding: 40px 20px 20px;
+    font-family: 'Nunito', Arial, sans-serif;
+    border-top: 3px solid #4dabf7;
+    margin-top: 60px;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.footer-column {
+    flex: 1;
+    min-width: 250px;
+    margin: 10px 20px;
+}
+
+.footer-column h3 {
+    color: #2c3e50;
+    font-size: 22px;
+    margin-bottom: 15px;
+    font-family: 'Pacifico', cursive;
+}
+
+.footer-column h3 span {
+    color: #4dabf7;
+}
+
+.footer-column p {
+    color: #333;
+    font-size: 14px;
+    line-height: 1.6;
+    margin-top: 15px;
+}
+
+.footer-column p b {
+    color: #4dabf7;
+    font-size: 16px;
+}
+
+.footer-column .contact-title {
+    color: #2c3e50;
+    font-size: 18px;
+    margin-bottom: 15px;
+    font-weight: 700;
+    font-family: 'Nunito', Arial, sans-serif;
+}
+
+.footer-column .contact-info {
+    color: #333;
+    font-size: 14px;
+    line-height: 2;
+}
+
+.footer-column .contact-info i {
+    color: #4dabf7;
+    width: 25px;
+}
+
+.footer-column .contact-info a {
+    color: #2c3e50;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-column .contact-info a:hover {
+    color: #4dabf7;
+}
+
+.footer-column .contact-info .hotline {
+    font-weight: 700;
+}
+
+.footer-column .social-title {
+    color: #2c3e50;
+    font-size: 18px;
+    margin-bottom: 15px;
+    font-weight: 700;
+    font-family: 'Nunito', Arial, sans-serif;
+}
+
+.footer-column .social-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.footer-column .social-links a {
+    color: #2c3e50;
+    font-size: 28px;
+    transition: all 0.3s;
+    display: inline-block;
+}
+
+.footer-column .social-links a:hover {
+    transform: scale(1.2);
+}
+
+.footer-column .social-links a.facebook:hover {
+    color: #4267B2;
+}
+
+.footer-column .social-links a.instagram:hover {
+    color: #E1306C;
+}
+
+.footer-column .social-links a.youtube:hover {
+    color: #FF0000;
+}
+
+.footer-copyright {
+    text-align: center;
+    padding-top: 30px;
+    border-top: 1px solid #b0d4f0;
+    margin-top: 30px;
+}
+
+.footer-copyright p {
+    color: #666;
+    font-size: 14px;
+}
+
+.footer-copyright p span {
+    color: #4dabf7;
+    font-weight: 700;
+}

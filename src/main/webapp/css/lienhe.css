@@ -1,0 +1,67 @@
+/* css/lienhe.css */
+.contact {
+    min-height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.contact-box {
+    background: #fff;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    max-width: 600px;
+    width: 100%;
+    text-align: center;
+}
+
+.contact-box h2 {
+    color: #2c3e50;
+    margin-bottom: 15px;
+    font-size: 28px;
+}
+
+.contact-box h2 i {
+    color: #4dabf7;
+    margin-right: 8px;
+}
+
+.contact-box > p {
+    color: #666;
+    margin-bottom: 30px;
+    font-size: 16px;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    margin: 15px 0;
+    padding: 12px;
+    background: #f8f9fa;
+    border-radius: 50px;
+}
+
+.contact-item span {
+    font-size: 22px;
+    min-width: 35px;
+    color: #4dabf7;
+}
+
+.contact-item p {
+    margin: 0;
+    color: #2c3e50;
+    font-size: 16px;
+}
+
+.contact-item a {
+    color: #2c3e50;
+    text-decoration: none;
+}
+
+.contact-item a:hover {
+    color: #4dabf7;
+}
