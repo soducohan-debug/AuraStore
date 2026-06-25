@@ -12,4 +12,4 @@ COPY --from=build /app/target/AuraStore.war /usr/local/tomcat/webapps/ROOT.war
 
 EXPOSE 8080
 
-CMD ["sh", "-c", "echo TOMCAT_STARTING && catalina.sh run"]
+CMD ["sh", "-c", "echo === DOCKERFILE RUNNING === && catalina.sh run"]
